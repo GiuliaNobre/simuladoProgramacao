@@ -4,22 +4,24 @@
     Um investidor deseja saber quantos meses serão necessários para conseguir dobrar o dinheiro investido.
     Considere que o dinheiro rende 0,5% (0.05) ao mês.
     Portanto, peça para o usuário informar o valor inicial investido.
-    Calcule, no seu programa, o dobro desse valor e, usando a estrutura de repetição "for com variável de controle", descubra quanto tempo será necessário para que o investimento inicial seja duplicado.
     Apresente os seguintes dados:
     - Investimento Inicial
     - Quantidade de meses necessário para ser duplicado
     */
 
     //ENTRADA
-    const valorInicial = Number(prompt("Informe o valor inicial investido"))
-    const DobroValor = valorInicial * 2
+    let valorInicial = Number(prompt("Informe o valor inicial investido"));
+    let valorFinal = valorInicial * 2;
 
     //PROCESSAMENTO
-for (let valorInicial = 0; valorInicial =   controle++) {
-   
-}
+    let meses = 0;
+    for (meses = 0; valorInicial <= valorFinal; meses++) {
+        valorInicial = valorInicial * 1.005;
+    }
 
     //SAÍDA
+    document.write(`Investimento Inicial: R$: ${(valorFinal / 2).toFixed(2)} <br>`); 
+    document.write(`Meses para atingir o dobro investido: ${meses}`);
 
 
 </script>

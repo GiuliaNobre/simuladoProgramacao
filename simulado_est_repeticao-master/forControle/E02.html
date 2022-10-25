@@ -15,15 +15,20 @@
     const quantidadeAbastecimento = parseInt(prompt("informe a quantidade de vezes que abasteceu"));
     const quilometrospercorridos = Number(prompt("informe a distancia percorrida em quilometros"));
 
+    let custo = 0;
+    let custoTotal = 0;
+
+
     //PROCESSAMENTO
-    for (let controle = 0; quilometrospercorridos = 2; controle++) {
-        let custo = prompt("Informe o custo de cada abastecimento efetuado")
-        let custoQuilometropercorrido = quilometrospercorridos / custo
-        let custoTotal = quantidadeAbastecimento * quilometrospercorridos
+    for (let controle = 0; controle < quantidadeAbastecimento; controle++) {
+        custo = Number(prompt("Informe o custo de cada abastecimento efetuado"));
+        custoTotal = custoTotal + custo;
     }
+    let custoKm = custoTotal / quantidadeAbastecimento;
+
 
     //SAÍDA
-    document.write(`O custo de cada quilometro percorrido é de: ${custoQuilometropercorrido} <br> O custo total dos abastecimentos efetuados: ${custoTotal} 
+    document.write(`O custo de cada quilometro percorrido é de: ${custo} <br> O custo total dos abastecimentos efetuados R$: ${custoTotal.toFixed(2)} 
 <br> A  quilometragem total percorrida: ${quilometrospercorridos}`);
 
 </script>

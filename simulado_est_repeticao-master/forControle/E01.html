@@ -12,19 +12,19 @@
     let listaMeninos = [];
 
     //PROCESSAMENTO
-    for (let quantidadeDeAlunos = 0; quantidadeDeAlunos = 2; controle++) {
-        let informacao = prompt("informe o nome dos alunos ")
-        let genero = prompt("Informe o genero de seus alunos, menino = O,  menina = A")
+    for (let contador = 1; contador <= quantidadeDeAlunos; contador++) {
+        let informacao = prompt("informe o nome dos alunos ");
+        let genero = prompt("Informe o genero de seus alunos, menino = O,  menina = A").toUpperCase();
         if (genero == "O") {
-            listaMeninos.push(genero);
+            listaMeninos.push(informacao);
         }
         else if (genero == "A") {
-            listaMeninas.push(genero);
+            listaMeninas.push(informacao);
         }
 
     }
 
     //SAÍDA
-    document.write(`Lista de meninas ${listaMeninas.sort()} <br> ${listaMeninos.sort()}`)
+    document.write(`Lista de meninas: ${listaMeninas.sort().join(", ")} <br> Lista meninos: ${listaMeninos.sort().join(", ")}`);
 
 </script>
